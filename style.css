@@ -1,0 +1,733 @@
+/* SETEAR ESTILOS POR DEFECTO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.video-container {
+    position: relative;
+    width: 50%;
+    height: 78vh;
+    overflow: hidden;
+    border: 10px solid var(--color-primario); /* Cambia el color del borde según sea necesario */
+    border-radius: 20px; /* Ajusta el radio de los bordes para crear una forma decorativa */
+}
+
+.video-portada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover; /* Ajusta el tamaño del video para cubrir el contenedor */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+
+/* DEFINIMOS VARIABLES DE MARCA */
+:root {
+    --color-primario: #06141B;
+    --color-secundario: #11212D;
+    --color-terciario: #253745;
+    --color-cuartario: #4A5C6A;
+    --color-quintario: #9BA8AB;
+    --color-sextario: #CCD0CF;
+    --transition-duration: 0.3s;
+}
+
+/* Estilos para el encabezado de servicios */
+.services-header {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre los elementos */
+    position: absolute; /* Posiciona el elemento de acuerdo con su contenedor */
+    top: 25px; /* Distancia desde el borde superior */
+    left: 50%; /* Posición horizontal centrada */
+    transform: translateX(-50%); /* Ajusta la posición horizontal para centrar */
+    background-color: #2c2b2b4b; /* Color de fondo */
+     /* Ancho completo */
+    padding: 10px; /* Añade espacio alrededor del contenido */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    z-index: 1000; /* Asegura que esté en la parte superior */
+}.services-header {
+    /* Add your existing styles here, including the positioning properties */
+    transition: all 0.3s ease; /* Adds a transition effect to all properties with a duration of 0.3 seconds and an easing function of ease */
+  }
+  
+  .services-header:hover {
+    transform: translateY(-5px) scale(1.05); /* Adds a vertical translation and scaling effect when hovering over the element */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adds a more pronounced box shadow effect when hovering over the element */
+  }
+  
+  .services-header:active {
+    transform: translateY(5px) scale(0.95); /* Adds a vertical translation and scaling effect when clicking on the element */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Adds a less pronounced box shadow effect when clicking on the element */
+  }
+  
+  .link {
+    /* Add your existing styles here */
+    transition: all 0.3s ease; /* Adds a transition effect to all properties with a duration of 0.3 seconds and an easing function of ease */
+  }
+  
+  .link:hover {
+    /* Add your existing styles here */
+    transform: translateY(-5px); /* Adds a vertical translation effect when hovering over the element */
+  }
+  
+  .link:active {
+    /* Add your existing styles here */
+    transform: translateY(5px); /* Adds a vertical translation effect when clicking on the element */
+  }
+  
+  .link:focus {
+    outline: none; /* Removes the default outline that appears when the element is focused */
+    border-bottom: 2px solid var(--color-terciario); /* Adds a bottom border to the element when it is focused */
+    animation: pulse 1s ease-in-out; /* Adds a pulse animation to the element when it is focused */
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0px var(--color-terciario);
+    }
+    50% {
+      box-shadow: 0 0 0 5px var(--color-terciario);
+    }
+    100% {
+      box-shadow: 0 0 0 0px var(--color-terciario);
+    }
+  }
+
+  
+  /* Estilos para los elementos de enlace */
+  .link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-quintario);
+    font-weight: 700;
+    padding: 10px; /* Añade algo de relleno para crear espacio alrededor del texto */
+    border-radius: 5px; /* Añade esquinas redondeadas al elemento */
+    transition: all 0.3s ease; /* Añade un efecto de transición a todas las propiedades con una duración de 0.3 segundos y una función de aceleración de ease */
+  }
+  
+  /* Estilos cuando se pasa el mouse sobre el enlace */
+  .link:hover {
+    background-color: #f5f5f5; /* Añade un color de fondo al pasar el mouse sobre el elemento */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1); /* Añade un efecto de sombra al pasar el mouse sobre el elemento */
+  }
+  
+  
+  /* Estilos para el encabezado */
+  header {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  header:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: var(--color-primario);
+  }
+  
+  .fw-bold {
+    color: black;
+    font-weight: 700 !important;
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+  
+  header:hover h1 {
+    transform: translateY(-10px);
+  }
+  
+  header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  header:hover nav ul {
+    transform: translateY(-10px);
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  header nav a:hover {
+    color: var(--color-secundario);
+    transform: translateY(-3px);
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+    }
+  
+    header nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  
+    form input[type="submit"]:hover {
+      background-color: #444;
+    }
+  
+    footer {
+      background-color: #e00303;
+    }
+  }
+  
+  /* Custom CSS */
+  body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: var(--color-sextario);
+      background-color: var(--color-terciario);
+      padding: 20px;
+      transition: background-color 0.5s ease;
+  }
+  
+  #services {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--color-cuartario);
+  }
+  
+  #services h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: var(--color-primario);
+  }
+  
+  #services p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #fcf9f9;
+  }
+  
+  .service-item {
+    text-align: left;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+  }
+  
+  .service-item:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .service-item i {
+    font-size: 3rem;
+    color: #2196f3;
+    margin-bottom: 1rem;
+  }
+  
+  .service-item h3 {
+   font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #070000;
+  }
+  
+  .service-item p {
+    font-size: 1.1rem;
+    color: #666;
+  }
+  
+  @media (max-width: 767.98px) {
+    .service-item {
+      margin-bottom: 2rem;
+    }
+  }
+  
+  #experience {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  #experience h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    border-color:#070000;
+  }
+  
+  #experience p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    color: #faf7f7;
+  }
+  
+  .experience-item {
+    text-align: left;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    margin-bottom: 3rem;
+    transition: all 0.3s ease;
+  }
+  
+  .experience-item:hover {
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .experience-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #000000;
+  }
+  
+  .experience-list,
+  .achievements-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .experience-list li,
+  .achievements-list li {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .experience-list li:last-child,
+  .achievements-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .experience-list li span,
+  .achievements-list li span {
+    font-weight: bold;
+    margin-right: 1rem;
+    color: #71d3e7;
+  }
+  
+  .experience-list li p,
+  .achievements-list li p {
+    margin: 0;
+    color: #242222;
+  }
+  
+  @media (max-width: 767.98px) {
+    .experience-item {
+      margin-bottom: 2rem;
+    }
+  
+    .experience-list li,
+    .achievements-list li {
+      padding: 1rem 0;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+  
+    .experience-list li span,
+    .achievements-list li span {
+      display: block;
+      font-size: 1.2rem;
+      color: #666;
+    }
+  
+    .experience-list li p,
+    .achievements-list li p {
+      font-size: 1.4rem;
+      margin-bottom: 0.2rem;
+    }
+  
+    .duration {
+      font-size: 1.2rem;
+      color: #666;
+      display: block;
+    }
+  
+    .achievements-list {
+      list-style: none;
+    }
+  }#gallery {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#gallery h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.image-item {
+    position: relative;
+    width: calc(33.333% - 20px);
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.image-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height 0.5s ease;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.image-item:hover .overlay {
+    height: 100%;
+}
+
+.overlay h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 60px;
+    overflow: hidden;
+}
+
+.image-item:hover .overlay p {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .image-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .image-item {
+        width: 100%;
+    }
+}
+
+  
+  #hobbies {
+    text-align: center;
+    padding: 50px 0;
+}
+
+#hobbies h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.hobbies-gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hobby-item {
+    position: relative;
+    width: calc(33.333% - 20px);
+    height: 300px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+}
+
+.hobby-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobby-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hobby-item:hover img {
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height 0.5s ease;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.hobby-item:hover .overlay {
+    height: 100%;
+}
+
+.overlay h3 {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.overlay p {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    height: 60px;
+    overflow: hidden;
+}
+
+.hobby-item:hover .overlay p {
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .hobby-item {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hobby-item {
+        width: 100%;
+    }
+}
+  
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--color-primario);
+}
+
+header h1,
+header nav a {
+    color: #fff;
+}
+
+header nav a:hover {
+    color: var(--color-secundario);
+}
+
+section {
+    color: #fff;
+    transition: transform var(--transition-duration) ease,
+        box-shadow var(--transition-duration) ease,
+        background-color var(--transition-duration) ease;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-terciario);
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+header h1 {
+    margin: 0;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: transform var(--transition-duration) ease;
+}
+
+header nav a:hover {
+    color: var(--color-secundario);
+    transform: translateY(-3px);
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    color: #ccc;
+    padding: 10px;
+    background-color: var(--color-quintario);
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    transition: transform var(--transition-duration) ease;
+}
+
+form:focus-within {
+    box-shadow: 0 0 5px var(--color-primario);
+}
+
+form:focus-within input,
+form:focus-within textarea {
+    border-color: var(--color-cuartario);
+}
+
+form:focus-within input[type="submit"] {
+    background-color: var(--color-cuartario);
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+[type="submit"] {
+    background-color: var(--color-quintario);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.5s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: var(--color-secundario);
+}
+
+footer {
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    form input[type="submit"]:hover {
+        background-color: #444;
+    }
+
+    footer {
+        background-color: #e7dede;
+    }
+}
